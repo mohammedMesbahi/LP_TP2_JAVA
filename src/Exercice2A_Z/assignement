@@ -1,0 +1,31 @@
+Exercice 2 : A faire de A à Z
+On souhaite gérer les salaires des employés d’une société de fabrication de produits pharmaceutiques.
+Pour gérer les employés de cette société, nous commençons par la création de la classe
+Employe.java qui contient :
+- les attributs privés nom, prénom, âge et date d'entrée en service dans la société,
+- un constructeur avec paramètres,
+- une méthode getTitre() qui retourne la chaine : "L’employé"
+- une méthode toString() qui retourne la chaine " L'employé "+ prénom + nom . Utiliser la
+méthode getTitre().
+- une méthode abstraite calculerSalaireEmployé qui retourne le salaire de l’employé (double).
+La formule de calcul du salaire dépend du type de l’employé.
+NB: La classe Employe doit être déclarée abstraite parce qu’elle contient une méthode
+abstraite (calculerSalaireEmployé()).
+Créer les classes Représentant, Vendeur, Technicien, Manutentionnaire qui dérivent de la
+classe Employé.
+La formule de calcul du salaire mensuel dépend du type de l’employé :
+- Représentant : 30% du chiffre d'affaires qu'ils réalisent mensuellement, plus 1000 DH.
+Utiliser les constantes de classe suivantes : POURCENT_REPRESENTANT=0.3 et
+BONUS_REPRESENTANT=1000. Ajouter un attribut membre chiffreAffaire (double) pour le
+chiffre d’affaire.
+Salaire= chiffreAffaire * POURCENT_REPRESENTANT+ BONUS_REPRESENTANT
+- Vendeur : 20% du chiffre d'affaires qu'ils réalisent mensuellement, plus 670 DH. Utiliser les
+constantes de classe suivantes : POURCENT_VENDEUR = 0.2 et BONUS_VENDEUR = 670.
+- Technicien : nombre d’unités produites mensuellement multiplié par 5. Utiliser la constante
+de classe FACTEUR_UNITE = 5.0.
+- Manutentionnaire : nombre d’heures de travail mensuel multiplié par 100 DH. Utiliser la
+constante de classe SALAIRE_HORAIRE = 100.00.
+Ajouter à chaque classe dérivée les attributs appropriés, un constructeur avec paramètres
+(utiliser super), le code de la méthode abstraite calculerSalaireEmployé() et la redéfinition de
+la méthode getTitre().
+Par exemple pour un représentant, getTitre() retourne : "Le représentant ".
